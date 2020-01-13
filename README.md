@@ -12,14 +12,22 @@ https://docs.microsoft.com/en-us/windows/wsl/faq
 
 Then, install [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q) and the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701) from the Microsoft Store app.
 
+## VSCode Remote Development Extension
+
+> The Remote Development extension pack allows you to open any folder in a container, on a remote machine, or in the Windows Subsystem for Linux (WSL) and take advantage of VS Code's full feature set.
+
+https://code.visualstudio.com/docs/remote/wsl
+
 ## Keyboard shortcut for WSL2
 
 Navigate to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`. Create a shortcut file, then in its properties set "Target" to `C:\Users\YOUR_USERNAME_HERE\AppData\Local\Microsoft\WindowsApps\wt.exe`, "Start in" to `C:\Windows\System32`, and "Shortcut Key" to your preference.
 
 ## Link Ubuntu and Windows directories
 
+**[Note that file system performance outside of the Linux root is extremely slow.](https://github.com/microsoft/WSL/issues/4197) I recommend doing development from `~/` and linking from there.**
+
 ```bash
-ln -s /mnt/c/Users/YOUR_USERNAME_HERE/NAME_OF_DIRECTORY ~/
+ln -s ~/NAME_OF_DIRECTORY /mnt/c/Users/YOUR_USERNAME_HERE/
 ```
 
 # More WSL2 Customization

@@ -16,6 +16,12 @@ Then, install [Ubuntu](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngv
 
 Navigate to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs`. Create a shortcut file, then in its properties set "Target" to `C:\Users\YOUR_USERNAME_HERE\AppData\Local\Microsoft\WindowsApps\wt.exe`, "Start in" to `C:\Windows\System32`, and "Shortcut Key" to your preference.
 
+## Link Ubuntu and Windows directories
+
+```bash
+ln -s /mnt/c/Users/YOUR_USERNAME_HERE/NAME_OF_DIRECTORY ~/
+```
+
 # More WSL2 Customization
 
 The Windows Terminal can be customized by typing `Ctrl`+`,`, which will open `settings.json`.
